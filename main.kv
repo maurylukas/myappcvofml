@@ -1,10 +1,30 @@
 #: include kv/home.kv
 #: include kv/resume.kv
 #: include kv/projects.kv
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+#: import Gradient kivy_gradient.Gradient
 
-GridLayout:
-    rows: 1
+FloatLayout:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            texture: Gradient.horizontal (get_color_from_hex ("#477fad"), get_color_from_hex ("#9bb77c"))
+    GridLayout:
+        pos_hint: {"right": 1, "top": 1}
+        size_hint: 1, 0.15
+        rows: 1
+        cols: 3
+        Label:
+            text: ""
+        Label:
+            id: titulo
+            text: "Título"
+        Label:
+            text: ""
     ScreenManager:
+        pos_hint: {"right": 1, "top": 0.85}
+        size_hint: 1, 0.9
         id: manager
         Home:
             name: "home"
