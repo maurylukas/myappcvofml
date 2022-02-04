@@ -1,2 +1,17 @@
-Label:
-    text: "Testando se funciona"
+#: include kv/home.kv
+#: include kv/resume.kv
+#: include kv/projects.kv
+
+GridLayout:
+    rows: 1
+    ScreenManager:
+        id: manager
+        Home:
+            name: "home"
+            id: home
+        Resume:
+            name: "resume"
+            id: resume
+        Projects:
+            name: "projects"
+            id: projects
