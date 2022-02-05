@@ -1,0 +1,100 @@
+<Home>:
+    FloatLayout:
+        ScrollView:
+            pos_hint: {"right": 1, "top": 1}
+            size_hint: 1, 0.9
+            GridLayout:
+                rows: 2
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: "400dp"
+                row_force_default: True
+                FloatLayout:
+                    GridLayout:
+                        pos_hint: {"right": 1, "top": 1}
+                        size_hint: 1, 1
+                        rows: 1
+                        cols: 2
+                        padding: 10
+                        spacing: 10
+
+                        # image
+                        GridLayout:
+                            rows: 1
+                            cols: 1
+                            Image:
+                                source: "mycv/img/eu.jpg"
+
+                        # contacts
+                        GridLayout:
+                            rows: 4
+                            cols: 1
+                            Label:
+                                text: "E-mail: "
+                            Label:
+                                text: "LinkedIn: "
+                            Label:
+                                text: "Github: "
+                            Label:
+                                text: "EuroPass: "
+
+                # about me
+                FloatLayout:
+                    GridLayout:
+                        pos_hint: {"right": 1, "top": 1}
+                        size_hint: 1, 1
+                        rows: 2
+                        cols: 1
+                        padding: 10
+                        spacing: 10
+                        GridLayout:
+                            rows: 1
+                            cols: 1
+                            Label:
+                                text: "Born in Brazil. Ready for the world. I'm a full-time father of a couple of the cutest cats and husband of the most beautiful girl. I love learning more and more about almost everything and solving problems as if my life depended on it. I believe in liberty more than anything and, therefore, that NOBODY should NEVER have the power to force how someone should live out their lives."
+                                text_size: self.width, None
+                                size_hint: 1, None
+                                height: self.texture_size [1]
+                        GridLayout:
+                            rows: 1
+                            cols: 1
+                            Image:
+                                source: "mycv/img/nos.jpg"
+
+        # buttons
+        FloatLayout:
+            pos_hint: {"right": 1, "top": 0.1}
+            size_hint: 1, 0.1
+
+            # background
+            canvas:
+                Color:
+                    rgb: get_color_from_hex ("##343a40")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+            # resume button
+            #LabelButton:
+                #pos_hint: {"right": 0.55, "top": 0.6}
+                #size_hint: 0.2, 0.2
+                #text: "Resume"
+                #on_release: app.alternar ("resume")
+            ImageButton:
+                pos_hint: {"right": 0.45, "top": 0.9}
+                size_hint: 0.4, 0.8
+                source: "mycv/img/resumed.png"
+                on_release: app.alternar ("resume")
+
+            # projects button
+            #LabelButton:
+                #pos_hint: {"right": 0.9, "top": 0.6}
+                #size_hint: 0.2, 0.2
+                #text: "Projects"
+                #on_release: app.alternar ("projects")
+            ImageButton:
+                pos_hint: {"right": 0.95, "top": 0.9}
+                size_hint: 0.4, 0.8
+                source: "mycv/img/projectsd.png"
+                on_release: app.alternar ("projects")

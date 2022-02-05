@@ -1,20 +1,13 @@
 # start of imports
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.uix.screenmanager import Screen
 from kivy.core.window import Window
+from mycv import screens
+from mycv import buttons
 # end of imports
 
-# generating screens
-class Home (Screen):
-    pass
-class Resume (Screen):
-    pass
-class Projects (Screen):
-    pass
-
 # generating application
-GUI = Builder.load_file("main.kv")
+GUI = Builder.load_file("mycv/main.kv")
 
 class MainApp (App):
     def build(self):
