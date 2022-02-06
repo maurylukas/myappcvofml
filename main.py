@@ -2,6 +2,9 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
+from kivy.uix.popup import Popup
+from kivy.uix.label import Label
+from kivy.core.clipboard import Clipboard
 from mycv import screens
 from mycv import buttons
 # end of imports
@@ -29,6 +32,11 @@ class MainApp (App):
 
     def alternar (self, id):
         self.root.ids ["manager"].current = id
+
+    def copiar (self):
+        Clipboard.copy ("maurylukas@yahoo.com")
+        Popup (title = "", content = Label (text = "E-mail copied:\nmaurylukas@yahoo.com", halign = "center"),
+               size_hint = (0.3, 0.3), background_color = (0, 0, 0, 0), separator_color = (0, 0, 0, 0)).open ()
 
 
 # running application

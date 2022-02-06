@@ -3,6 +3,7 @@
 #: include mycv/kv/projects.kv
 #: import get_color_from_hex kivy.utils.get_color_from_hex
 #: import Gradient kivy_gradient.Gradient
+#: import webbrowser webbrowser
 
 FloatLayout:
     # background
@@ -17,14 +18,10 @@ FloatLayout:
         pos_hint: {"right": 1, "top": 1}
         size_hint: 1, 0.05
         rows: 1
-        cols: 3
-        Label:
-            text: ""
+        cols: 1
         Label:
             id: titulo
-            text: "Título"
-        Label:
-            text: ""
+            text: "A little bit about me"
 
     # screen space
     ScreenManager:
