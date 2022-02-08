@@ -25,17 +25,24 @@ class MainApp (App):
                 return False
             elif self.root.ids ["manager"].current_screen.name == "resume" or "projects":
                 self.root.ids ["manager"].current = "home"
+                self.root.ids ["titulo"].text = "A little bit about me"
                 return True
             else:
                 self.root.ids ["manager"].current = "projects"
+                self.nomear(id)
                 return True
 
     def alternar (self, id):
         self.root.ids ["manager"].current = id
+        self.nomear (id)
+
+    def nomear (self, id):
+        self.root.ids ["titulo"].text = str (self.root.ids ["manager"].current).title()
 
     def copiar (self):
-        Clipboard.copy ("maurylukas@yahoo.com")
-        Popup (title = "", content = Label (text = "E-mail copied:\nmaurylukas@yahoo.com", halign = "center"),
+        self.email = "maurylukas@yahoo.com"
+        Clipboard.copy (self.email)
+        Popup (title = "", content = Label (text = "E-mail copied:\n" + self.email, halign = "center"),
                size_hint = (0.3, 0.3), background_color = (0, 0, 0, 0), separator_color = (0, 0, 0, 0)).open ()
 
 

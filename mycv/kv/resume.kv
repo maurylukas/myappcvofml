@@ -1,8 +1,116 @@
 <Resume>:
-    GridLayout:
-        pos_hint: {"right": 1, "top": 1}
-        size_hint: 1, 1
-        rows: 3
-        cols: 1
-        Label:
-            text: "Tela Resume"
+    ScrollView:
+        GridLayout:
+            rows: 3
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: "200dp"
+                #row_force_default: True
+            padding: 10
+            spacing: 50
+
+            # work experience
+            FloatLayout:
+                Label:
+                    pos_hint: {"right": 1, "top": 1}
+                    size_hint: 1, 0.1
+                    text: "Work Experience:"
+                    bold: True
+                Label:
+                    pos_hint: {"right": 1, "top": 0.8}
+                    size_hint: 1, 0.2
+                    text: "2006-2021: Computer software and hardware maintenance freelancer"
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                Label:
+                    pos_hint: {"right": 1, "top": 0.5}
+                    size_hint: 1, 0.2
+                    text: "2018-2019: Independent investment advisor"
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                Label:
+                    pos_hint: {"right": 1, "top": 0.2}
+                    size_hint: 1, 0.2
+                    text: "2016-2017: Programmer, designer, scriptwriter and co-founder of Futura Games"
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+
+            # education
+            FloatLayout:
+                Label:
+                    pos_hint: {"right": 1, "top": 1}
+                    size_hint: 1, 0.1
+                    text: "Education:"
+                    bold: True
+                Label:
+                    pos_hint: {"right": 1, "top": 0.8}
+                    size_hint: 1, 0.2
+                    text: "2014-2016: Graduation on Digital Games at Estacio do Ceara University Center"
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                LabelButton:
+                    pos_hint: {"right": 1, "top": 0.6}
+                    size_hint: 1, 0.2
+                    text: "Link to the diploma with the Hague apostille"
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                    on_release: webbrowser.open ("https://apostil.org.br/validation?number=1463554-21&crc=9754A7C9")
+                Label:
+                    pos_hint: {"right": 1, "top": 0.4}
+                    size_hint: 1, 0.2
+                    text: "2002-2005: Graduation on Biological Sciences at Ceara State University"
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                LabelButton:
+                    pos_hint: {"right": 1, "top": 0.2}
+                    size_hint: 1, 0.2
+                    text: "Link to the diploma with the Hague apostille"
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                    on_release: webbrowser.open ("https://apostil.org.br/validation?number=1676954-21&crc=CD8179B2")
+
+
+            # education
+            FloatLayout:
+                Label:
+                    pos_hint: {"right": 1, "top": 1}
+                    size_hint: 1, 0.1
+                    text: "Skills & Interests:"
+                    bold: True
+                Label:
+                    pos_hint: {"right": 1, "top": 0.8}
+                    size_hint: 1, 0.2
+                    text: "Programming Languages: Python, HTML, CSS, JS, C#, Java, SQL (coming soon)."
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                Label:
+                    pos_hint: {"right": 1, "top": 0.5}
+                    size_hint: 1, 0.2
+                    text: "Human Languages: Portuguese (Native), English (Fluent), Italian (Basic), German (Basic)."
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
+                Label:
+                    pos_hint: {"right": 1, "top": 0.2}
+                    size_hint: 1, 0.2
+                    text: "Loves: Cats, Plants, Cryptocurrencies, Games, Movies, Series, K-pop songs."
+                    italic: True
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size [1]
