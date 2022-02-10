@@ -1,0 +1,21 @@
+<Maze>:
+    ScrollView:
+        GridLayout:
+            #rows: 3
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: "200dp"
+            #row_force_default: True
+            padding: 10
+            spacing: 30
+
+            Label:
+                text: "My first 3D project. I made it back in 2016, when I was on my second year at college, using C# on Unity engine. It's a First Person Shooter game where you have to find your way out of a maze. But before doing that, you have to find the flaming sphere guiding yourself by its sound. Just be careful about the enemies, they may look cute but surely they are deadly. Everytime you kill one of them, the game is saved, though."
+                text_size: self.width, None
+                #size_hint: 1, None
+                height: self.texture_size [1]
+            Image:
+                source: "mycv/img/labirinto 1.jpg"
+            Image:
+                source: "mycv/img/labirinto 2.jpg"

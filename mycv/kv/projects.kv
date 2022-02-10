@@ -1,8 +1,46 @@
 <Projects>:
-    GridLayout:
-        pos_hint: {"right": 1, "top": 1}
-        size_hint: 1, 1
-        rows: 3
-        cols: 1
-        Label:
-            text: "Tela Projects"
+    ScrollView:
+        GridLayout:
+            #rows: 3
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: "200dp"
+            row_force_default: True
+            padding: 10
+            spacing: 30
+
+            # spacial
+            ImageButton:
+                source: "mycv/img/spacial.jpg"
+                on_release: app.alternar ("spacial")
+
+            # colony
+            ImageButton:
+                source: "mycv/img/telas.jpg"
+                on_release: app.alternar ("colony")
+
+            # site
+            ImageButton:
+                source: "mycv/img/site.jpg"
+                on_release: app.alternar ("site")
+
+            # maze
+            ImageButton:
+                source: "mycv/img/labirinto 1.jpg"
+                on_release: app.alternar ("maze")
+
+            # outback
+            ImageButton:
+                source: "mycv/img/sertao 5.jpg"
+                on_release: app.alternar ("outback")
+
+            # fight
+            ImageButton:
+                source: "mycv/img/luta 3.jpg"
+                on_release: app.alternar ("fight")
+
+            # platform
+            ImageButton:
+                source: "mycv/img/fic 2.jpg"
+                on_release: app.alternar ("platform")

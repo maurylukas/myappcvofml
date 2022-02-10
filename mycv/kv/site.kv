@@ -1,0 +1,19 @@
+<Site>:
+    ScrollView:
+        GridLayout:
+            #rows: 3
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: "200dp"
+            #row_force_default: True
+            padding: 10
+            spacing: 30
+
+            Label:
+                text: "My website version of this app. Same content and some more. Go check it out!"
+                text_size: self.width, None
+                #size_hint: 1, None
+                height: self.texture_size [1]
+            Image:
+                source: "mycv/img/site.jpg"

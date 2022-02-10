@@ -23,13 +23,13 @@ class MainApp (App):
         if key == 27:
             if self.root.ids ["manager"].current_screen.name == "home":
                 return False
-            elif self.root.ids ["manager"].current_screen.name == "resume" or "projects":
+            elif self.root.ids ["manager"].current_screen.name in ("resume", "projects"):
                 self.root.ids ["manager"].current = "home"
                 self.root.ids ["titulo"].text = "A little bit about me"
                 return True
             else:
                 self.root.ids ["manager"].current = "projects"
-                self.nomear(id)
+                self.nomear (id)
                 return True
 
     def alternar (self, id):
