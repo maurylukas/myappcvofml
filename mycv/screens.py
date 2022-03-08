@@ -34,3 +34,6 @@ class Fight (Screen):
 
 class Platform (Screen):
     pass
+
+class Data_Science (Screen):
+    pass
