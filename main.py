@@ -7,9 +7,12 @@ from kivy.uix.label import Label
 from kivy.core.clipboard import Clipboard
 from mycv import screens
 from mycv import buttons
+import certifi
+import os
 # end of imports
 
 # generating application
+os.environ['SSL_CERT_FILE'] = certifi.where()
 GUI = Builder.load_file("mycv/main.kv")
 
 class MainApp (App):
