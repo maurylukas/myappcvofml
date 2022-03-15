@@ -17,7 +17,7 @@ GUI = Builder.load_file("mycv/main.kv")
 
 class MainApp (App):
     def build(self):
-        self.icon = "mycv/img/luna.png"
+        self.icon = "mycv/img/appicon.png"
         #Window.size = (360,800)
         return GUI
 
