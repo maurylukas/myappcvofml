@@ -7,18 +7,18 @@ from kivy.uix.label import Label
 from kivy.core.clipboard import Clipboard
 from mycv import screens
 from mycv import buttons
-import certifi
-import os
+#import certifi
+#import os
 # end of imports
 
 # generating application
-os.environ['SSL_CERT_FILE'] = certifi.where()
+#os.environ['SSL_CERT_FILE'] = certifi.where()
 GUI = Builder.load_file("mycv/main.kv")
 
 class MainApp (App):
     def build(self):
         self.icon = "mycv/img/luna.png"
-        #Window.size = (360,800)
+        Window.size = (360,800)
         return GUI
 
     def on_start(self):
@@ -47,7 +47,7 @@ class MainApp (App):
     def copiar (self):
         self.email = "maurylukas@yahoo.com"
         Clipboard.copy (self.email)
-        Popup (title = "", content = Label (text = "E-mail copied:\n" + self.email, halign = "center"),
+        Popup (title = "", content = Label (text = "E-mail copied to clipboard:\n\n" + self.email + "\n\nClick anywhere else to close", halign = "center"),
                size_hint = (0.3, 0.3), background_color = (0, 0, 0, 0), separator_color = (0, 0, 0, 0)).open ()
 
 
