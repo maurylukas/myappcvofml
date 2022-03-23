@@ -1,4 +1,4 @@
-# myappcvofml
+# My CV (app version)
  An app that is my CV
 
 https://maurylukas.herokuapp.com
